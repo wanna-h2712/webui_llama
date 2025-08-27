@@ -29,7 +29,7 @@ gnome-session-quit
 //after running it logout and login back again and use the command again
 
 //to get llama model show
-//check your ip
+//check your ip gateway
 docker network inspect bridge
 sudo nano /etc/systemd/system/ollama.service
 //add
