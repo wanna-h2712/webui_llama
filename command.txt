@@ -26,5 +26,12 @@ sudo docker run hello-world
 sudo usermod -aG docker $USER
 //after running it logout and login back again and use the command again
 
+//to get llama model show
+//check your ip
+docker network inspect bridge
+sudo nano /etc/systemd/system/ollama.service
+//add
+Environment=OLLAMA_HOST=172.17.0.1
+
 //Portainer docker
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:lts
