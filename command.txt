@@ -24,6 +24,8 @@ sudo docker run hello-world
   docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 //if got permission denied error use this
 sudo usermod -aG docker $USER
+//to logout
+gnome-session-quit
 //after running it logout and login back again and use the command again
 
 //to get llama model show
