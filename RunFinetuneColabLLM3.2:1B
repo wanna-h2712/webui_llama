@@ -1,0 +1,32 @@
+#Code in google colab
+https://colab.research.google.com/drive/1eDvzFtTM08Qq_qAKtmNYiNef2swXifls?usp=sharing
+#Modelfile ...you can download it in your drive
+https://drive.google.com/file/d/1CKNn5K-szvkfDKRUVxb_7xBG_5olII7n/view?usp=sharing
+#After run everything done your file should be in your Drive #your file shoule name (unsloth.F16.gguf) Download it
+
+
+#frist run ollama in first terminal
+ollama serve
+
+#make new folder in second terminal
+#go to Downloads folder
+cd Downloads
+mkdir ollama-test        #or name what ever you want cuz we have to make new folder to Downloads folder
+#After you make a new one you have to drag file unsloth.F16.gguf in to ollama test folder
+cd ollama-test           #go to folder that you make
+touch ModelfileLLM       #name what ever you want
+ls #to check
+
+#edit your modelfine so we can tune our baby in there
+nano ModelfileLLM #and paste model file that we already downlond in there
+#you will see the fist line From./...... you have to change it to >> From./unsloth.F16.gguf
+
+#After you done we gonna save by hit Ctrl X and then press Y to save the model file. and then press Enter
+ls #to check that we already have it
+
+#Name your AI file Modelfile 
+ollama create finetuneLLM -f ModelfileLLM
+ollama list #to check >> and we should see finetuneLLM : latest
+
+#and now we can run our AI to talk to Mommy
+ollama run finetuneLLM
