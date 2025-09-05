@@ -37,3 +37,20 @@ Environment=OLLAMA_HOST=172.17.0.1
 
 //Portainer docker
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:lts
+
+//SSH Server in Ubuntu VM
+//you have to download putty into your notebook
+sudu apt update 
+sudo apt install openssh-server -y
+//Check SSH working or not
+sudo systemctl status ssh
+//>>>>if it not working do this
+sudo systemctl enable ssh
+sudo systemctl start ssh
+
+//to find ip address in ubuntu VM
+ip a
+
+//after you finished all. open putty and type your username in ubuntu VM and your ip address, like. wanna@196.168.56.106
+
+//if nothing wrong everthing should be fine to run
