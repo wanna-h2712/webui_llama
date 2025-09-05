@@ -30,3 +30,4 @@ ollama list #to check >> and we should see finetuneLLM : latest
 
 #and now we can run our AI to talk to Mommy
 ollama run finetuneLLM
+//If nothing wrong it should have block for you to ask Q
